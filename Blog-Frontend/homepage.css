@@ -1,0 +1,276 @@
+.homepage-body {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+#homepage-header {
+    padding: 0 20px;
+    margin: auto;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    background-color: rgb(86, 86, 86);
+    color:aliceblue;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    opacity: .9;
+}
+
+.navbar {
+    list-style-type: none;
+    display: flex;
+    column-gap: 30px;
+    transition: all 0.3s ease-in-out;
+    padding-bottom: 10px;
+}
+
+.new-post-container, .comment-form, .comment-text {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.new-post-button {
+    width: 200px;
+    font-size: 15px;
+    margin-top: 5px;
+    right: 20px;
+}
+
+.filter-section {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-bar {
+    width: 220px;
+    padding-left: 21px;
+}
+
+.fa-search {
+    position: absolute;
+    z-index: 1;
+    top: 8.5px;
+    left: 5px;
+}
+
+.hidden-element {
+    display: none;
+}
+
+.hide {
+    display:none;
+}
+
+.aside-container {
+    display: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: rgb(86, 86, 86);
+    opacity: .9;
+    height: 60px;
+}
+
+/* HAMBURGER MENU */
+.navbar {
+    position: fixed; 
+    top: 60px;
+    left: 0px;
+    width: 100%;
+    padding: 10px 0px 25px;
+    background-color: rgb(86, 86, 86);
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    transform: translateX(-100%);
+}
+.nav-open {
+    transform: translateX(0) !important;
+}
+
+.nav-item {
+    font-size: 16px;
+}
+
+.hamburger {
+    cursor: pointer;
+}
+
+.hamburger-open .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger-open .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-open .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.bar {
+    height: 2px;
+    width: 27px;
+    background: rgb(237, 245, 252);
+    margin: 5px 0px;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+}
+/* end hamburger */
+
+.new-post-div {
+    border: 1px solid black;
+    box-shadow: .5px .5px 2px 2px white;
+    margin: 20px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.new-post-text {
+    position: relative;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 1px 0px 0px white;
+    margin: auto;
+    min-height: 150px;
+    padding: 10px;
+}
+
+.delete-button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+}
+
+.comment-section {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 500px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.comment-form {
+    position: relative;
+}
+
+.new-comment-button {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+}
+
+.comment-text {
+    border: 1px solid black;
+    font-size: 0.9rem;
+    min-height: 100px;
+    position: relative;
+    box-shadow: .5px .5px 2px 2px white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#heart {
+    position: absolute;
+    bottom:5px;
+    left: 5px;
+}
+
+
+.counter {
+    position: absolute;
+    bottom: 5px;
+    left: 24px;
+}
+
+textarea {
+    padding: 10px;
+    border-radius: 5px;
+}
+.dark-text {
+    background-color: lightgray;
+}
+
+
+@media screen and (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .navbar {
+        flex-direction: row;
+        position: relative;
+        transform: translateX(0) !important;
+        top: 0;
+        padding: 10px;
+        width: 55%;
+        justify-content: space-between;
+    }
+
+    .hidden-element {
+        display: block;
+    }
+
+    .user-header {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    #page-section-container {
+        display: flex;
+
+    }
+    .left-side {
+        width: 68%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        max-height: 100vh;
+    }
+
+    .right-side {
+        width: 29%;
+    }
+
+    .aside-container {
+        display: block;
+        margin: 20px;
+        border: 1px solid black;
+        box-shadow: .5px .5px 2px 2px white;
+        max-height: 100vh;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        border-radius: 5px;
+    }
+}

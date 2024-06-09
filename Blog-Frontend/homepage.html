@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./homepage.css">
+    <link rel="stylesheet" href="./API.css">
+    <title>Boosted Homepage</title>
+</head>
+<body class="homepage-body">
+
+    <header id="homepage-header">
+        <div class="top-nav">
+            <h1>Boosted</h1>
+            
+            <menu class="navbar">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Community</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Newsletters</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
+            </menu>
+
+            <div class="user-header">
+                <div class="hi-user">Hi, [username]</div>
+                <img class="profile-pic hidden-element" src="./assets/profile.png" alt="profile picture" width="25">
+            </div>
+
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+        </div>
+
+    </header>
+    
+    <section class="posted-section posting" id="page-section-container">
+        <h3 class="hide">New Post</h3>
+        <div class="left-side">
+            <form class="new-post-container posting" id="new-post-form">
+                <textarea name="new-post" id="new-post" cols="30" rows="10" placeholder="New Post"></textarea>
+                <input type="submit" class="new-post-button button" value="Post">
+            </form>
+
+            <div class="filter-section">
+                
+                <div class="sort-container">
+                    <label for="sort-options" id="sort-label">Sort</label>
+                    <select name="sort-options" id="sort-options">
+                        <option value="new2Old">newest to oldest ↑</option>
+                        <option value="old2New">oldest to newest ↓</option>
+                    </select>
+                </div>
+
+                <form class="search-container">
+                    <i class="fa fa-search"></i>
+                    <input class="search-bar" type="text" >
+                    <input type="submit" class="search-button button" value="Search">
+                </form>
+
+            </div>
+
+            <div class="post-history">
+
+            </div>
+        </div>
+        <div class="right-side">
+            <aside class="aside-container">
+                <div class="trivia-head">
+                    <h3 class="api-title">Trivia Game</h3>
+                    <div class="quiz-score">
+                        <span id="correct-score"></span>/<span id="total-questions"></span>
+                    </div>
+                </div>
+
+                <div class="trivia-body">
+                    <h3 class="trivia-question" id="question">Question <br> <span class="category">Category</span> </h3>
+                    
+                    <ul class="answer-choices">
+                        
+
+                    </ul>
+                    <div class="result">
+                        
+                    </div>
+                </div>
+
+                <div class="trivia-foot">
+                    <button type="button" class="button" id="check-answer">Check Answer</button>
+                    <button type="button" class="button" id="play-again">Play Again</button>
+                </div>
+            </aside>
+        </div>
+        
+    </section>
+
+    
+    <footer>
+        <h1>Boosted</h1>
+        <h2>Made by: Kathy</h2>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/8ef549f281.js" crossorigin="anonymous"></script>
+    <script src="./fetch.js"></script>
+    <script src="./login.js"></script>
+    <script src="./homepage.js"></script>
+</body>
+</html>

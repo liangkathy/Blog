@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0px;
+}
+
+.login-body{
+    text-align: center;
+    background-color: aliceblue;
+}
+
+#login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: .5px .5px 2px 2px white;
+    margin-bottom: 20px;
+}
+
+h1 {
+    letter-spacing: -1.5px;
+}
+
+.dark-mode-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+#login-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid black;
+    box-shadow: .5px .5px 2px 2px white;
+    width: auto;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+#login-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#login-input {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+    gap: 15px;
+    position: relative;
+}
+
+#password, #username {
+    padding-left: 20px;
+}
+
+.login-error-message {
+    color:red;
+    font-size: .7rem;
+}
+
+.fa-lock{
+    position: absolute;
+    top: 43px;
+    left: 5px;
+}
+
+.fa-user {
+    position: absolute;
+    top: 3px;
+    left: 5px;
+}
+
+.icon {
+    color: black;
+}
+
+.sign-in-container {
+    display: flex; 
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+#other-logins {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: auto;
+    gap: 5px;
+}
+
+.button {
+    font-size: .8rem;
+    background-color: rgb(133, 133, 133);
+    border: 1px solid rgb(133, 133, 133);
+    color: white;
+    border-radius: 3px;
+    padding: 7px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.button:hover {
+    background-color: rgb(128, 155, 206);
+    color: white;
+    border: 1px solid rgb(128, 155, 206);
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+.dark {
+    background-color: #343434;
+    color: white;
+}
+
+a, a:link {
+    text-decoration: none;
+    color: rgba(128, 155, 206, 0.7);
+    transition: all 0.4s;
+}
+
+a:hover, a:visited:hover, a:focus {
+    color: rgba(128, 155, 206, 1);
+}
+
+a:visited {
+    color: rgba(128, 155, 206, 0.7);
+}
+
+
+a:active, a:visited:active {
+    color: rgba(128, 155, 206, 0.7);
+}
+
+/* TOGGLE BUTTON */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: rgb(128, 155, 206);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px rgb(128, 155, 206);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+/* end toggle */
+
