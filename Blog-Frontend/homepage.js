@@ -41,11 +41,15 @@ let allText = [];
 //add post
 function addNewPost() {
     const postContent = document.getElementById("new-post").value;
+    const postTitle = document.getElementById("new-post-title").value;
     const newPostElement = document.createElement("div");
+    const newPostTitleElement = document.createElement("div");
     newPostElement.classList.add("new-post-text");
+    newPostTitleElement.classList.add("new-post-title");
 
     newPostElement.textContent = postContent;
-    
+    newPostTitleElement.textContent = postTitle;
+
     const newPostDiv = document.createElement("div");
     newPostDiv.classList.add("new-post-div");
 
@@ -53,6 +57,7 @@ function addNewPost() {
     commentSection.classList.add("comment-section")
 
     postHistorySection.appendChild(newPostDiv);
+    newPostDiv.appendChild(newPostTitleElement);
     newPostDiv.appendChild(newPostElement);
     newPostDiv.appendChild(commentSection);
 
@@ -60,27 +65,32 @@ function addNewPost() {
     addCommentSection(commentSection);
     addLikeButton(newPostElement);
     sortOptionSelect(newPostDiv);
-    runSearch(newPostElement);
+    runSearch(newPostElement, newPostTitleElement);
     clearPostTextArea();
 }
 
-//clear post text area
+//clear post title & text area
 function clearPostTextArea() {
     document.getElementById("new-post").value = "";
+    document.getElementById("new-post-title").value = "";
 }
 
 //search for value
-function runSearch(newPostElement) {
-    let postText = {element: newPostElement, text: newPostElement.textContent}
-
+function runSearch(newPostElement, newPostTitleElement) {
+    let postText = {element: newPostElement, text: newPostElement.textContent, title: newPostTitleElement.textContent}
+    
     allText.push(postText);
+
+    console.log(allText);
 
     searchButton.addEventListener("click", () => {
         const value = searchInput.value.toLowerCase();
     
         allText.forEach(object  => {
         const isVisible = object.text.toLowerCase().includes(value);
-        if (!isVisible) {
+        const isTitleVisible = object.title.toLowerCase().includes(value);
+
+        if (!isVisible && !isTitleVisible) {
             object.element.parentElement.classList.add("hide");
         } else {
             object.element.parentElement.classList.remove("hide");

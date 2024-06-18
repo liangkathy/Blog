@@ -62,14 +62,15 @@ body {
 
 .search-bar {
     width: 220px;
-    padding-left: 21px;
+    padding-left: 28px;
+    height: 2.5em;
 }
 
 .fa-search {
     position: absolute;
     z-index: 1;
-    top: 8.5px;
-    left: 5px;
+    top: 9px;
+    left: 8px;
 }
 
 .hidden-element {
@@ -170,6 +171,10 @@ footer {
     align-items: center;
     justify-content: center;
     color: red;
+    border: none;
+    background-color: transparent;
+    font-size: 1.2em;
+    cursor: pointer;
 }
 
 .comment-section {
@@ -196,7 +201,7 @@ footer {
     min-height: 100px;
     position: relative;
     box-shadow: .5px .5px 2px 2px white;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
 }
 
@@ -214,10 +219,24 @@ footer {
     left: 24px;
 }
 
-textarea {
+textarea, .title-input {
     padding: 10px;
     border-radius: 5px;
 }
+
+.title-input {
+    margin-bottom: 5px;
+}
+
+.new-post-title {
+    font-weight: 600;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+}
+
 .dark-text {
     background-color: lightgray;
 }

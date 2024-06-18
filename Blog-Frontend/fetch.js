@@ -10,7 +10,7 @@ const playAgain = document.getElementById("play-again");
 const result = document.querySelector(".result");
 
 let trivia = null;
-let correctAnswer = "", correctScore = askedCount = 0, totalQuestion = 10; //starting data
+let correctAnswer = "", correctScore = askedCount = 0, totalQuestion = 5; //starting data
 
 //functions
 
