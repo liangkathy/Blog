@@ -15,6 +15,7 @@ body {
     top: 0;
     background-color: rgb(86, 86, 86);
     color:aliceblue;
+    z-index: 1000;
 }
 
 .top-nav {
@@ -238,7 +239,7 @@ textarea, .title-input {
 }
 
 .dark-text {
-    background-color: lightgray;
+    background-color: rgb(226, 226, 226);
 }
 
 
@@ -269,7 +270,7 @@ textarea, .title-input {
 
     #page-section-container {
         display: flex;
-
+        /* padding-bottom: 80px; */
     }
     .left-side {
         width: 68%;

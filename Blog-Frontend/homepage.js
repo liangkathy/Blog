@@ -4,6 +4,7 @@ const postHistorySection = document.querySelector(".post-history");
 const oldCommentSection = document.createElement("div");
 const newPostButton = document.querySelector(".new-post-button");
 const textAreas = document.querySelectorAll("textarea");
+const postTitle = document.getElementById("new-post-title");
 
 //get username data from local storage
 const hiUserField = document.querySelector(".hi-user");
@@ -17,6 +18,8 @@ if (darkMode === "enabled") {
     textAreas.forEach(element => {
         element.classList.add("dark-text");
     });
+    postTitle.classList.add("dark-text");
+
     icons.forEach(icon => {
         icon.classList.add("icon");
     });
@@ -41,14 +44,13 @@ let allText = [];
 //add post
 function addNewPost() {
     const postContent = document.getElementById("new-post").value;
-    const postTitle = document.getElementById("new-post-title").value;
     const newPostElement = document.createElement("div");
     const newPostTitleElement = document.createElement("div");
     newPostElement.classList.add("new-post-text");
     newPostTitleElement.classList.add("new-post-title");
 
     newPostElement.textContent = postContent;
-    newPostTitleElement.textContent = postTitle;
+    newPostTitleElement.textContent = postTitle.value;
 
     const newPostDiv = document.createElement("div");
     newPostDiv.classList.add("new-post-div");
